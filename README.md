@@ -1,7 +1,7 @@
-### TS, React, Zustaand
+### TS, React, Zustaand, Socket.io
 
-### тестовое задание
+### Tестовое задание
 
-### запуск в dev режиме `npm run dev`
+### запуск в dev режиме: `npm run dev`
 
 ![alt text](src/assets/images/screenshot.png)

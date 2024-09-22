@@ -30,13 +30,22 @@ export function Main() {
                             styles[`main-room-title__${roomStatus}`]
                         }`}
                     >
-                        {roomStatus === "start"
-                            ? sessionStatus[roomStatus] +
-                                  " " +
-                                  initData.schedule.find(
-                                      (item) => item.id === currentEventID
-                                  )?.item.title || ""
-                            : sessionStatus[roomStatus]}
+                        {" "}
+                        <span
+                            style={{
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                            }}
+                        >
+                            {roomStatus === "start"
+                                ? sessionStatus[roomStatus] +
+                                      " " +
+                                      initData.schedule.find(
+                                          (item) => item.id === currentEventID
+                                      )?.item.title || ""
+                                : sessionStatus[roomStatus]}
+                        </span>
                     </h2>
 
                     <Schedule>
