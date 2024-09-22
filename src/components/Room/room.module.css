@@ -1,0 +1,11 @@
+.room-container {
+    margin: 0 auto;
+    width: 1312px;
+    height: 523px;
+    display: flex;
+    column-gap: 29px;
+}
+
+.room-video {
+    border-radius: 13px;
+}

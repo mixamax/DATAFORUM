@@ -1,0 +1,37 @@
+@import "../node_modules/normalize.css/normalize.css";
+
+@font-face {
+    font-family: Bebas_Neue;
+    src: url(./assets/fonts/Bebas_Neue/Bebas_Neue.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf)
+        format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-family: Bebas_Neue, Montserrat, Inter, system-ui, Arial, sans-serif;
+    line-height: 1.27;
+    font-weight: 400;
+
+    --color-of-broadcast-suspended: #8eb3eb;
+    --color-active-session: #0bd28a;
+    --color-of-broadcast-will-start: #8eb3eb;
+    --color-of-broadcast-is-over: #ca0e0e;
+
+    --primary-color: #ffffff;
+    --secondary-color: #a4a9ad;
+    --active-title-color: #0bd28a;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,129 @@
+.chat-container {
+    width: 353px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #262740;
+    border-radius: 13px;
+    padding-bottom: 14px;
+}
+
+.chat-title-container {
+    height: 46px;
+    margin: 8px 14px 0;
+    padding: 9px 6px 9px 0px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #343551;
+    align-items: center;
+}
+
+.title-text {
+    font-family: Bebas_Neue;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: normal;
+    margin: 0;
+    color: var(--active-title-color);
+}
+
+.chat-msgs-field {
+    flex: 1;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    scrollbar-color: var(--active-title-color) #343551;
+    scrollbar-width: thin;
+}
+
+.chat-msg-container {
+    display: flex;
+    min-height: 72px;
+    font-family: Montserrat;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        min-width: 7px;
+        height: 100%;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: #343551;
+        &::before {
+            background-color: var(--active-title-color);
+        }
+    }
+}
+
+.chat-msg {
+    padding: 5px 10px 5px 5px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: var(--primary-color);
+    display: block;
+}
+
+.user-msg-text {
+    font-size: 12px;
+    line-height: 1.47;
+    color: var(--secondary-color);
+    margin-top: 5px;
+    display: block;
+    white-space: break-spaces;
+}
+
+.chat-msg-label {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    height: 41px;
+    margin: 0 14px;
+    border-radius: 20.5px;
+    background-color: #343551;
+    padding: 0 8px;
+}
+
+.chat-msg-input {
+    height: 100%;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 12px;
+    font-family: Montserrat;
+    color: var(--primary-color);
+    &::placeholder {
+        color: #66677e;
+    }
+}
+
+.chat-msg-btn-question,
+.chat-msg-btn-smile,
+.chat-msg-btn-send {
+    width: 28px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: 28px;
+}
+
+.chat-msg-btn-question {
+    background-image: url("src/assets/images/question.png");
+}
+
+.chat-msg-btn-smile {
+    background-image: url("src/assets/images/smile.svg");
+}
+
+.chat-msg-btn-send {
+    background-image: url("src/assets/images/plane.png");
+}
