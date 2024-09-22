@@ -34,7 +34,7 @@ export function Main() {
                             ? sessionStatus[roomStatus] +
                                   " " +
                                   initData.schedule.find(
-                                      (item) => item.is_active
+                                      (item) => item.id === currentEventID
                                   )?.item.title || ""
                             : sessionStatus[roomStatus]}
                     </h2>

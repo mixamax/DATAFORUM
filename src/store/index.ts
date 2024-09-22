@@ -43,8 +43,8 @@ export const useRoomStore = create<State & Action>((set) => ({
                 ),
             });
             set({
-                currentEventID: data.schedule.find((item) => item.is_active)
-                    ?.id,
+                currentEventID:
+                    data.schedule.find((item) => item.is_active)?.id || null,
             });
         } else {
             set({ isError: true });
