@@ -1,7 +1,10 @@
+import { memo } from "react";
+import { useSocket } from "../../hooks/useSocket";
 import { Chat } from "../Chat";
 import styles from "./room.module.css";
 
-export function Room() {
+export const Room = memo(function () {
+    useSocket();
     return (
         <div className={styles["room-container"]}>
             <video
@@ -14,4 +17,4 @@ export function Room() {
             <Chat />
         </div>
     );
-}
+});

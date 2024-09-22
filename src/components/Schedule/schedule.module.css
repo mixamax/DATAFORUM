@@ -5,27 +5,3 @@
     border-bottom: 1px solid #ababab;
     position: relative;
 }
-
-.swiper-button-left,
-.swiper-button-right {
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    background-size: 62px;
-    height: 62px;
-    width: 62px;
-    position: absolute;
-    top: 169px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.swiper-button-left {
-    left: 107px;
-    background-image: url("src/assets/images/arrow-left.svg");
-}
-
-.swiper-button-right {
-    right: 107px;
-    background-image: url("src/assets/images/arrow-right.svg");
-}

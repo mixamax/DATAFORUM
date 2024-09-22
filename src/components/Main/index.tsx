@@ -1,9 +1,8 @@
-// import { useState } from "react";
-import { useGetData } from "../../hooks/useGetData";
-// import { useSocket } from "../../hooks/useSocket";
 import { Room } from "../Room";
 import { Schedule } from "../Schedule";
+import { Slider } from "../Slider";
 import styles from "./main.module.css";
+import { useRoomStore } from "../../store";
 
 const sessionStatus = {
     willSoon: "ТРАНСЛЯЦИЯ СКОРО НАЧНЕТСЯ",
@@ -14,9 +13,9 @@ const sessionStatus = {
 };
 
 export function Main() {
-    const { initData, roomStatus, isLoading, isError, currentEventID } =
-        useGetData();
-    console.log("RENFER MAIN");
+    const { initData, isLoading, isError, roomStatus, currentEventID } =
+        useRoomStore();
+
     return (
         <main className={styles["main-container"]}>
             <h1 className={styles["main-room-title"]}>{`ЗАЛ ${
@@ -40,11 +39,13 @@ export function Main() {
                             : sessionStatus[roomStatus]}
                     </h2>
 
-                    <Schedule
-                        initData={initData}
-                        currentEventID={currentEventID}
-                        roomStatus={roomStatus}
-                    />
+                    <Schedule>
+                        <Slider
+                            initData={initData}
+                            currentEventID={currentEventID}
+                            roomStatus={roomStatus}
+                        />
+                    </Schedule>
                 </>
             )}
         </main>

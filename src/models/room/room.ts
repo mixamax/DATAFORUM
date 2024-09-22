@@ -27,3 +27,5 @@ export interface Item {
     text: string;
     img: string;
 }
+
+export type RoomStatus = "willSoon" | "start" | "stop" | "pause" | "idle";

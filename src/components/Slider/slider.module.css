@@ -1,0 +1,23 @@
+.slider-button-left,
+.slider-button-right {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    background-size: 62px;
+    height: 62px;
+    width: 62px;
+    position: absolute;
+    top: 169px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-button-left {
+    left: 107px;
+    background-image: url("src/assets/images/arrow-left.svg");
+}
+
+.slider-button-right {
+    right: 107px;
+    background-image: url("src/assets/images/arrow-right.svg");
+}
