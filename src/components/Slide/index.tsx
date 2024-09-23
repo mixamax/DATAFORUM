@@ -1,5 +1,6 @@
 import styles from "./slide.module.css";
 import { IScheduleItem } from "../../models/room/room";
+import { imgUrl } from "../../constants";
 
 interface ISlideProps {
     scheduleItem: IScheduleItem;
@@ -12,8 +13,9 @@ export function Slide({ scheduleItem, isActive }: ISlideProps) {
             <div className={styles["slide-avatar-wrapper"]}>
                 <img
                     loading="lazy"
-                    src="src/assets/images/avatar.png"
+                    src={imgUrl + scheduleItem.item.img}
                     alt="фото автора"
+                    height={121}
                 />
             </div>
             <div className={styles["slide-text-wrapper"]}>
