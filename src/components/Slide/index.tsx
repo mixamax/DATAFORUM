@@ -10,7 +10,11 @@ export function Slide({ scheduleItem, isActive }: ISlideProps) {
     return (
         <div className={styles["slide-container"]}>
             <div className={styles["slide-avatar-wrapper"]}>
-                <img src="src/assets/images/avatar.png" alt="фото автора" />
+                <img
+                    loading="lazy"
+                    src="src/assets/images/avatar.png"
+                    alt="фото автора"
+                />
             </div>
             <div className={styles["slide-text-wrapper"]}>
                 <span className={styles["slide-text-theme"]}>
